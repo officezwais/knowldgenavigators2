@@ -5,19 +5,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <meta name="theme-color" content="#030303">
 
-<!-- Primary Meta -->
 <title>Knowledge Navigators — GEO, AEO, SEO & Agentic Search Agency</title>
 <meta name="description" content="We make your brand the definitive answer inside ChatGPT, Perplexity, Gemini and Google AI Overviews. Elite Generative Engine Optimization, Answer Engine Optimization, technical SEO and Agentic Search for European companies.">
 <meta name="author" content="Knowledge Navigators">
 <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1">
 <link rel="canonical" href="https://www.knowledge-navigators.com/">
 
-<!-- hreflang -->
 <link rel="alternate" hreflang="en" href="https://www.knowledge-navigators.com/">
 <link rel="alternate" hreflang="de" href="https://www.knowledge-navigators.com/de/">
 <link rel="alternate" hreflang="x-default" href="https://www.knowledge-navigators.com/">
 
-<!-- Open Graph -->
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://www.knowledge-navigators.com/">
 <meta property="og:title" content="Knowledge Navigators — GEO, AEO, SEO & Agentic Search">
@@ -27,25 +24,19 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:locale:alternate" content="de_DE">
 
-<!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@knownavigators">
 <meta name="twitter:title" content="Knowledge Navigators — GEO, AEO, SEO & Agentic Search">
 <meta name="twitter:description" content="Elite GEO, AEO, SEO & Agentic Search. We make your brand the definitive answer in AI search.">
 <meta name="twitter:image" content="https://www.knowledge-navigators.com/assets/og.jpg">
 
-<!-- Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 
-<!-- Favicon -->
 <link rel="icon" href="/assets/Favicon.png" sizes="any">
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 
-<!-- ═══════════════════════════════════════════════════════════════
-     SCHEMA MARKUP
-     ═══════════════════════════════════════════════════════════════ -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -630,67 +621,73 @@ a:hover { text-decoration: underline; }
 }
 
 /* ═══════════════════════════════════════════════════════════════
-   NEW: PLAYBOOKS — Free Knowledge PDFs
+   NEW: PLAYBOOKS — Premium Redesign
    ═══════════════════════════════════════════════════════════════ */
 .playbooks-header { display:flex; justify-content:space-between; align-items:flex-end; gap:3rem; flex-wrap:wrap; margin-bottom:4vw; padding-bottom:2rem; border-bottom:1px solid var(--border); }
 .playbooks-header h2 { font-size:clamp(2rem,4.5vw,3.8rem); max-width:780px; letter-spacing:-0.035em; }
 .playbooks-header p { color:var(--text-secondary); max-width:420px; font-size:1rem; font-weight:300; line-height:1.6; }
-.playbooks-grid {
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:1.25rem;
-}
+.playbooks-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:1.5rem; }
+
 .playbook-card {
     display:flex; flex-direction:column;
-    background:var(--surface);
-    border:1px solid var(--border);
-    border-radius:14px;
-    overflow:hidden;
-    transition:transform .4s var(--ease-out), border-color .4s, background .4s;
-    text-decoration:none; color:inherit;
-    position:relative;
+    background: linear-gradient(145deg, var(--surface-2) 0%, var(--surface) 100%);
+    border: 1px solid var(--border-strong);
+    border-radius: 18px;
+    overflow: hidden;
+    transition: all 0.4s var(--ease-out);
+    text-decoration: none; color: inherit;
+    position: relative;
+    box-shadow: 0 10px 30px -10px rgba(0,0,0,0.5);
 }
-.playbook-card:hover { transform:translateY(-6px); border-color:rgba(226,255,84,0.35); background:var(--surface-2); text-decoration:none; }
+.playbook-card::before {
+    content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+    background: var(--accent);
+    opacity: 0; transition: opacity 0.4s ease; z-index: 10;
+}
+.playbook-card:hover { 
+    transform: translateY(-8px) scale(1.02); 
+    border-color: rgba(226,255,84,0.4); 
+    box-shadow: 0 20px 40px -10px var(--accent-glow);
+    text-decoration: none; 
+}
+.playbook-card:hover::before { opacity: 1; }
+
 .playbook-cover {
-    aspect-ratio:3/4;
-    position:relative;
-    display:flex; flex-direction:column; justify-content:space-between;
-    padding:1.5rem 1.25rem;
-    background:linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%);
-    border-bottom:1px solid var(--border);
-    overflow:hidden;
+    aspect-ratio: 4/3;
+    position: relative;
+    display: flex; flex-direction: column; justify-content: flex-start; gap: 1rem;
+    padding: 2rem 1.5rem;
+    background: radial-gradient(circle at top right, rgba(255,255,255,0.04) 0%, transparent 70%);
+    border-bottom: 1px solid var(--border);
 }
-.playbook-cover.cover-geo { background:linear-gradient(135deg, #2a1e4a 0%, #0a0a0a 70%); }
-.playbook-cover.cover-aeo { background:linear-gradient(135deg, #1e4a3f 0%, #0a0a0a 70%); }
-.playbook-cover.cover-seo { background:linear-gradient(135deg, #4a2e1e 0%, #0a0a0a 70%); }
-.playbook-cover.cover-agentic { background:linear-gradient(135deg, #3a1e4a 0%, #0a0a0a 70%); }
-.playbook-cover::before {
-    content:''; position:absolute; top:-30%; right:-30%;
-    width:120%; height:120%;
-    background:radial-gradient(circle, var(--accent) 0%, transparent 60%);
-    opacity:.08; filter:blur(40px); pointer-events:none;
+.playbook-tag { 
+    align-self: flex-start;
+    background: rgba(226,255,84,0.1);
+    padding: 0.4rem 0.8rem;
+    border-radius: 100px;
+    font-family: var(--font-mono); font-size: 0.65rem; font-weight: 700; 
+    text-transform: uppercase; letter-spacing: 0.1em; color: var(--accent); 
 }
-.playbook-tag { font-family:var(--font-mono); font-size:.62rem; text-transform:uppercase; letter-spacing:.14em; color:var(--accent); position:relative; z-index:1; }
 .playbook-cover-title {
     font-size:clamp(1.4rem,1.8vw,2rem);
-    font-weight:500;
-    line-height:1; letter-spacing:-0.035em;
+    font-weight:600;
+    line-height:1.1; letter-spacing:-0.035em;
     color:var(--text-primary);
     position:relative; z-index:1;
 }
-.playbook-cover-title .sm { display:block; font-size:.55em; color:var(--text-secondary); margin-bottom:.4rem; letter-spacing:0; font-weight:400; }
-.playbook-body { padding:1.2rem 1.25rem 1.4rem; display:flex; flex-direction:column; gap:.6rem; flex:1; }
-.playbook-body h3 { font-size:1.05rem; font-weight:500; letter-spacing:-0.02em; }
-.playbook-body p { color:var(--text-secondary); font-size:.82rem; font-weight:300; line-height:1.5; flex:1; }
+.playbook-cover-title .sm { display:block; font-size:.55em; color:var(--text-secondary); margin-bottom:.6rem; letter-spacing:0; font-weight:400; text-transform: uppercase;}
+.playbook-body { padding:1.5rem 1.5rem; display:flex; flex-direction:column; gap:.75rem; flex:1; }
+.playbook-body h3 { font-size:1.1rem; font-weight:600; letter-spacing:-0.02em; color:var(--text-primary); }
+.playbook-body p { color:var(--text-secondary); font-size:.85rem; font-weight:300; line-height:1.6; flex:1; }
 .playbook-meta {
     display:flex; align-items:center; justify-content:space-between;
-    padding-top:.85rem; margin-top:.25rem;
+    padding-top:1rem; margin-top:0.5rem;
     border-top:1px solid var(--border);
     font-family:var(--font-mono); font-size:.65rem; text-transform:uppercase; letter-spacing:.1em;
     color:var(--text-secondary);
 }
-.playbook-meta .dl { color:var(--accent); display:inline-flex; align-items:center; gap:.35rem; transition:gap .3s; }
-.playbook-card:hover .dl { gap:.6rem; }
+.playbook-meta .dl { color:var(--accent); font-weight: 700; display:inline-flex; align-items:center; gap:.4rem; transition:gap .3s; }
+.playbook-card:hover .dl { gap:.75rem; }
 
 /* ═══════════════════════════════════════════════════════════════
    METHODOLOGY (existing — kept)
@@ -870,16 +867,10 @@ footer { padding:6vw 0 2vw; border-top:1px solid var(--border); }
 <div class="noise-overlay" aria-hidden="true"></div>
 <div class="cursor-dot" id="cursor" aria-hidden="true"></div>
 
-<!-- ═══════════════════════════════════════════════════════════════
-     HEADER / NAV — REDESIGNED
-     ═══════════════════════════════════════════════════════════════ -->
 <header class="site-header" id="siteHeader">
     <a href="/index.html" class="site-logo" aria-label="Knowledge Navigators home">
-        <span class="logo-mark" aria-hidden="true">
-            <svg class="logo-mark-inner" width="16" height="16" viewBox="0 0 16 16" fill="none">
-                <!-- Compass / nav star mark -->
-                <path d="M8 1 L10 7 L15 8 L10 9 L8 15 L6 9 L1 8 L6 7 Z" fill="#E2FF54"/>
-            </svg>
+        <span class="logo-mark" aria-hidden="true" style="background:transparent; border:none; padding:0;">
+            <img src="/assets/Favicon.png" alt="Logo" class="logo-mark-inner" style="width:100%; height:100%; object-fit:contain; border-radius:6px;">
         </span>
         <span>
             <span class="logo-word">Knowledge Navigators</span>
@@ -904,9 +895,6 @@ footer { padding:6vw 0 2vw; border-top:1px solid var(--border); }
 </header>
 
 <main>
-<!-- ═══════════════════════════════════════════════════════════════
-     HERO
-     ═══════════════════════════════════════════════════════════════ -->
 <section class="hero" aria-label="Hero">
     <video class="hero-video" id="heroVideo" loop muted playsinline aria-hidden="true" preload="none">
         <source data-src="/assets/video.mp4" type="video/mp4">
@@ -944,7 +932,7 @@ footer { padding:6vw 0 2vw; border-top:1px solid var(--border); }
 
         <div class="hero-actions">
             <button class="btn btn-primary cursor-ring" id="auditBtn">Book a Free Call Now →</button>
-            <a href="#explainer" class="btn btn-ghost cursor-ring">Watch: What is GEO?</a>
+            <a href="#explainer" class="btn btn-ghost cursor-ring" style="display: none;">Watch: What is GEO?</a>
         </div>
 
         <div class="trust-row">
@@ -968,10 +956,7 @@ footer { padding:6vw 0 2vw; border-top:1px solid var(--border); }
     </div>
 </section>
 
-<!-- ═══════════════════════════════════════════════════════════════
-     NEW: TALKING-HEAD EXPLAINER
-     ═══════════════════════════════════════════════════════════════ -->
-<section class="explainer" id="explainer" aria-labelledby="explainer-title">
+<section class="explainer" id="explainer" aria-labelledby="explainer-title" style="display: none;">
     <div class="container">
         <div class="explainer-inner">
             <div class="explainer-copy fade-up">
@@ -997,19 +982,11 @@ footer { padding:6vw 0 2vw; border-top:1px solid var(--border); }
                     </div>
                     <div class="placeholder-note">Drop your video at /assets/explainer.mp4</div>
                 </div>
-                <!-- When ready, replace the placeholder above with:
-                <video controls poster="/assets/explainer-poster.jpg">
-                    <source src="/assets/explainer.mp4" type="video/mp4">
-                </video>
-                -->
             </div>
         </div>
     </div>
 </section>
 
-<!-- ═══════════════════════════════════════════════════════════════
-     NEW: ASK AN LLM ABOUT US
-     ═══════════════════════════════════════════════════════════════ -->
 <section class="llm-ask" aria-labelledby="llm-ask-title">
     <div class="container">
         <div class="llm-ask-header fade-up">
@@ -1022,12 +999,11 @@ footer { padding:6vw 0 2vw; border-top:1px solid var(--border); }
 
         <div class="llm-grid fade-up delay-1">
 
-            <!-- ChatGPT -->
             <a class="llm-card cursor-ring" target="_blank" rel="noopener noreferrer"
                href="https://chatgpt.com/?q=As%20someone%20interested%20in%20AI%20search%20visibility%20and%20being%20cited%20by%20LLMs%20like%20ChatGPT%2C%20Perplexity%20and%20Gemini%2C%20I%20want%20to%20understand%20how%20Knowledge%20Navigators%20can%20help.%20Summarize%20the%20highlights%20of%20the%20Knowledge%20Navigators%20website%20(https%3A%2F%2Fwww.knowledge-navigators.com)%20and%20then%20help%20me%20figure%20out%20interactively%20which%20of%20their%20services%20%E2%80%94%20Generative%20Engine%20Optimization%2C%20Answer%20Engine%20Optimization%2C%20Technical%20SEO%2C%20or%20Agentic%20Search%20%E2%80%94%20would%20be%20most%20useful%20for%20my%20brand%20and%20why.">
                 <div class="llm-card-top">
-                    <div class="llm-logo" style="background:#10a37f;color:#fff;">
-                        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M22.28 9.82a5.96 5.96 0 0 0-.51-4.91 6 6 0 0 0-6.47-2.88A6 6 0 0 0 4.98 4.18a5.96 5.96 0 0 0-4 2.9 6 6 0 0 0 .74 7.04 5.96 5.96 0 0 0 .52 4.91 6 6 0 0 0 6.47 2.88 5.96 5.96 0 0 0 4.5 2.02 6 6 0 0 0 5.72-4.14 5.96 5.96 0 0 0 4-2.9 6 6 0 0 0-.65-7.07Z"/></svg>
+                    <div class="llm-logo" style="background:transparent; border:none;">
+                        <img src="/assets/ChatGPT_logo.png" alt="ChatGPT" style="width:100%; height:100%; object-fit:contain;">
                     </div>
                     <span class="llm-arrow">↗</span>
                 </div>
@@ -1037,12 +1013,11 @@ footer { padding:6vw 0 2vw; border-top:1px solid var(--border); }
                 </div>
             </a>
 
-            <!-- Claude -->
             <a class="llm-card cursor-ring" target="_blank" rel="noopener noreferrer"
                href="https://claude.ai/new?q=As%20someone%20interested%20in%20AI%20search%20visibility%20and%20being%20cited%20by%20LLMs%20like%20ChatGPT%2C%20Perplexity%20and%20Gemini%2C%20I%20want%20to%20understand%20how%20Knowledge%20Navigators%20can%20help.%20Summarize%20the%20highlights%20of%20the%20Knowledge%20Navigators%20website%20(__https%3A%2F%2Fwww.knowledge-navigators.com__)%20and%20then%20help%20me%20figure%20out%20interactively%20which%20of%20their%20services%20%E2%80%94%20Generative%20Engine%20Optimization%2C%20Answer%20Engine%20Optimization%2C%20Technical%20SEO%2C%20or%20Agentic%20Search%20%E2%80%94%20would%20be%20most%20useful%20for%20my%20brand%20and%20why.">
                 <div class="llm-card-top">
-                    <div class="llm-logo" style="background:#d97757;color:#fff;">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M7 4h4l4 16h-4l-.8-3.2H6.5L5.8 20H2L7 4Zm1.5 9h3L10 8.5 8.5 13ZM17 4h4v16h-4V4Z"/></svg>
+                    <div class="llm-logo" style="background:transparent; border:none;">
+                        <img src="/assets/Claude_AI_symbol.svg.png" alt="Claude" style="width:100%; height:100%; object-fit:contain;">
                     </div>
                     <span class="llm-arrow">↗</span>
                 </div>
@@ -1052,12 +1027,11 @@ footer { padding:6vw 0 2vw; border-top:1px solid var(--border); }
                 </div>
             </a>
 
-            <!-- Perplexity -->
             <a class="llm-card cursor-ring" target="_blank" rel="noopener noreferrer"
                href="https://www.perplexity.ai/search?q=As%20someone%20interested%20in%20AI%20search%20visibility%20and%20being%20cited%20by%20LLMs%20like%20ChatGPT%2C%20Perplexity%20and%20Gemini%2C%20I%20want%20to%20understand%20how%20Knowledge%20Navigators%20can%20help.%20Summarize%20the%20highlights%20of%20the%20Knowledge%20Navigators%20website%20(https%3A%2F%2Fwww.knowledge-navigators.com)%20and%20then%20help%20me%20figure%20out%20interactively%20which%20of%20their%20services%20%E2%80%94%20Generative%20Engine%20Optimization%2C%20Answer%20Engine%20Optimization%2C%20Technical%20SEO%2C%20or%20Agentic%20Search%20%E2%80%94%20would%20be%20most%20useful%20for%20my%20brand%20and%20why.">
                 <div class="llm-card-top">
-                    <div class="llm-logo" style="background:#1f6e8c;color:#fff;">
-                        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8" fill="none"/><path d="M12 3v18M3 12h18" stroke="currentColor" stroke-width="1.4" fill="none"/></svg>
+                    <div class="llm-logo" style="background:transparent; border:none;">
+                        <img src="/assets/perplexity.png" alt="Perplexity" style="width:100%; height:100%; object-fit:contain;">
                     </div>
                     <span class="llm-arrow">↗</span>
                 </div>
@@ -1067,12 +1041,11 @@ footer { padding:6vw 0 2vw; border-top:1px solid var(--border); }
                 </div>
             </a>
 
-            <!-- Copilot -->
             <a class="llm-card cursor-ring" target="_blank" rel="noopener noreferrer"
                href="https://copilot.microsoft.com/?q=As%20someone%20interested%20in%20AI%20search%20visibility%20and%20being%20cited%20by%20LLMs%20like%20ChatGPT%2C%20Perplexity%20and%20Gemini%2C%20I%20want%20to%20understand%20how%20Knowledge%20Navigators%20can%20help.%20Summarize%20the%20highlights%20of%20the%20Knowledge%20Navigators%20website%20(https%3A%2F%2Fwww.knowledge-navigators.com)%20and%20then%20help%20me%20figure%20out%20interactively%20which%20of%20their%20services%20%E2%80%94%20Generative%20Engine%20Optimization%2C%20Answer%20Engine%20Optimization%2C%20Technical%20SEO%2C%20or%20Agentic%20Search%20%E2%80%94%20would%20be%20most%20useful%20for%20my%20brand%20and%20why.">
                 <div class="llm-card-top">
-                    <div class="llm-logo" style="background:#0078d4;color:#fff;">
-                        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M3 3h8.5v8.5H3V3Zm9.5 0H21v8.5h-8.5V3ZM3 12.5h8.5V21H3v-8.5Zm9.5 0H21V21h-8.5v-8.5Z"/></svg>
+                    <div class="llm-logo" style="background:transparent; border:none;">
+                        <img src="/assets/Microsoft_Copilot_Icon.svg.png" alt="Copilot" style="width:100%; height:100%; object-fit:contain;">
                     </div>
                     <span class="llm-arrow">↗</span>
                 </div>
@@ -1082,12 +1055,11 @@ footer { padding:6vw 0 2vw; border-top:1px solid var(--border); }
                 </div>
             </a>
 
-            <!-- Grok -->
             <a class="llm-card cursor-ring" target="_blank" rel="noopener noreferrer"
                href="https://grok.com/?q=As%20someone%20interested%20in%20AI%20search%20visibility%20and%20being%20cited%20by%20LLMs%20like%20ChatGPT%2C%20Perplexity%20and%20Gemini%2C%20I%20want%20to%20understand%20how%20Knowledge%20Navigators%20can%20help.%20Summarize%20the%20highlights%20of%20the%20Knowledge%20Navigators%20website%20(https%3A%2F%2Fwww.knowledge-navigators.com)%20and%20then%20help%20me%20figure%20out%20interactively%20which%20of%20their%20services%20%E2%80%94%20Generative%20Engine%20Optimization%2C%20Answer%20Engine%20Optimization%2C%20Technical%20SEO%2C%20or%20Agentic%20Search%20%E2%80%94%20would%20be%20most%20useful%20for%20my%20brand%20and%20why.">
                 <div class="llm-card-top">
-                    <div class="llm-logo" style="background:#000;border-color:var(--border-strong);color:#fff;">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M4 4 L20 20 M20 4 L4 20" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
+                    <div class="llm-logo" style="background:transparent; border:none;">
+                        <img src="/assets/grok-icon.webp" alt="Grok" style="width:100%; height:100%; object-fit:contain;">
                     </div>
                     <span class="llm-arrow">↗</span>
                 </div>
@@ -1097,11 +1069,10 @@ footer { padding:6vw 0 2vw; border-top:1px solid var(--border); }
                 </div>
             </a>
 
-            <!-- Gemini — copy-prompt fallback since no prefill URL -->
             <button class="llm-card cursor-ring" style="text-align:left;font:inherit;" id="geminiCopyBtn">
                 <div class="llm-card-top">
-                    <div class="llm-logo" style="background:linear-gradient(135deg,#4285f4,#9b72cb,#d96570);color:#fff;">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 L14 10 L22 12 L14 14 L12 22 L10 14 L2 12 L10 10 Z"/></svg>
+                    <div class="llm-logo" style="background:transparent; border:none;">
+                        <img src="/assets/Google_Gemini_icon_2025.svg.png" alt="Gemini" style="width:100%; height:100%; object-fit:contain;">
                     </div>
                     <span class="llm-arrow">↗</span>
                 </div>
@@ -1119,10 +1090,7 @@ footer { padding:6vw 0 2vw; border-top:1px solid var(--border); }
     </div>
 </section>
 
-<!-- ═══════════════════════════════════════════════════════════════
-     NEW: TRUSTED BY — VIDEOS + CLIENT LOGOS
-     ═══════════════════════════════════════════════════════════════ -->
-<section class="trusted" aria-labelledby="trusted-title">
+<section class="trusted" aria-labelledby="trusted-title" style="display: none;">
     <div class="container">
         <div class="trusted-header fade-up">
             <span class="label" style="text-align:center;">Trusted by</span>
@@ -1130,7 +1098,6 @@ footer { padding:6vw 0 2vw; border-top:1px solid var(--border); }
             <p>European brands that moved from "we rank fine" to "we get cited." Hear it from the operators who shipped it.</p>
         </div>
 
-        <!-- 9:16 testimonial videos -->
         <div class="testimonial-videos fade-up">
 
             <div class="testimonial-video cursor-ring" data-video="/assets/testimonials/client-1.mp4">
@@ -1203,7 +1170,6 @@ footer { padding:6vw 0 2vw; border-top:1px solid var(--border); }
 
         </div>
 
-        <!-- Client logo wall -->
         <span class="client-logos-label fade-up">Working with teams at</span>
         <div class="client-logos fade-up delay-1">
             <span class="client-logo">CLIENT ONE</span>
@@ -1217,9 +1183,6 @@ footer { padding:6vw 0 2vw; border-top:1px solid var(--border); }
     </div>
 </section>
 
-<!-- ═══════════════════════════════════════════════════════════════
-     SERVICES — GEO / AEO / SEO / AGENTIC
-     ═══════════════════════════════════════════════════════════════ -->
 <section id="services" aria-labelledby="cap-title">
     <div class="container">
         <h2 class="section-title fade-up" id="cap-title">Capabilities</h2>
@@ -1252,9 +1215,6 @@ footer { padding:6vw 0 2vw; border-top:1px solid var(--border); }
     </div>
 </section>
 
-<!-- ═══════════════════════════════════════════════════════════════
-     NEW: SEE YOUR GEO RANKING — Ranker Form
-     ═══════════════════════════════════════════════════════════════ -->
 <section class="ranker" id="ranker" aria-labelledby="ranker-title">
     <div class="container">
         <div class="ranker-inner">
@@ -1297,9 +1257,6 @@ footer { padding:6vw 0 2vw; border-top:1px solid var(--border); }
     </div>
 </section>
 
-<!-- ═══════════════════════════════════════════════════════════════
-     NEW: PLAYBOOKS — Free Knowledge PDFs
-     ═══════════════════════════════════════════════════════════════ -->
 <section class="playbooks" id="playbooks" aria-labelledby="playbooks-title">
     <div class="container">
         <div class="playbooks-header fade-up">
@@ -1388,9 +1345,6 @@ footer { padding:6vw 0 2vw; border-top:1px solid var(--border); }
     </div>
 </section>
 
-<!-- ═══════════════════════════════════════════════════════════════
-     METHODOLOGY
-     ═══════════════════════════════════════════════════════════════ -->
 <section id="methodology" aria-labelledby="method-title">
     <div class="container">
         <h2 class="section-title fade-up" id="method-title">Methodology</h2>
@@ -1423,9 +1377,6 @@ footer { padding:6vw 0 2vw; border-top:1px solid var(--border); }
     </div>
 </section>
 
-<!-- ═══════════════════════════════════════════════════════════════
-     WHY KNOWLEDGE NAVIGATORS
-     ═══════════════════════════════════════════════════════════════ -->
 <section id="why" aria-labelledby="why-title">
     <div class="container">
         <h2 class="section-title fade-up" id="why-title">Why Knowledge Navigators</h2>
@@ -1449,9 +1400,6 @@ footer { padding:6vw 0 2vw; border-top:1px solid var(--border); }
     </div>
 </section>
 
-<!-- ═══════════════════════════════════════════════════════════════
-     FAQ
-     ═══════════════════════════════════════════════════════════════ -->
 <section id="faq" aria-labelledby="faq-title">
     <div class="container">
         <h2 class="section-title fade-up" id="faq-title">Frequently Asked</h2>
@@ -1484,9 +1432,6 @@ footer { padding:6vw 0 2vw; border-top:1px solid var(--border); }
     </div>
 </section>
 
-<!-- ═══════════════════════════════════════════════════════════════
-     CTA BAND
-     ═══════════════════════════════════════════════════════════════ -->
 <section class="cta-band">
     <div class="container">
         <h2 class="fade-up">Your competitors are already being <span class="text-accent">cited</span>.<br>You're being <span class="text-accent">summarized around</span>.</h2>
@@ -1498,9 +1443,6 @@ footer { padding:6vw 0 2vw; border-top:1px solid var(--border); }
     </div>
 </section>
 
-<!-- ═══════════════════════════════════════════════════════════════
-     ABOUT (expanded)
-     ═══════════════════════════════════════════════════════════════ -->
 <section id="about" class="about-section" aria-labelledby="about-title">
     <div class="container">
         <div class="about-grid">
@@ -1531,9 +1473,6 @@ footer { padding:6vw 0 2vw; border-top:1px solid var(--border); }
 </section>
 </main>
 
-<!-- ═══════════════════════════════════════════════════════════════
-     FOOTER
-     ═══════════════════════════════════════════════════════════════ -->
 <footer id="contact" role="contentinfo">
     <div class="container fade-up">
         <div class="footer-content">
@@ -1589,9 +1528,6 @@ footer { padding:6vw 0 2vw; border-top:1px solid var(--border); }
     </div>
 </footer>
 
-<!-- ═══════════════════════════════════════════════════════════════
-     AUDIT / CONTACT MODAL
-     ═══════════════════════════════════════════════════════════════ -->
 <div class="modal-overlay" id="auditModal" role="dialog" aria-modal="true" aria-labelledby="audit-title">
     <div class="modal-content">
         <button class="modal-close cursor-ring" aria-label="Close modal">✕</button>
